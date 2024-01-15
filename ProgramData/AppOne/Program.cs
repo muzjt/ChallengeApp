@@ -1,66 +1,29 @@
-﻿double number = 10981923130;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToArray();
-List<int> allNumbers = new List<int>(10);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
-allNumbers.Add(0);
+﻿using AppOne;
 
-Console.WriteLine($"Wyniki dla liczby: {numberInString}");
-foreach (char character in letters)
+Employee employee1 = new Employee("Anton", "Chigurh", 38);
+Employee employee2 = new Employee("Llewelyn", "Moss", 37);
+Employee employee3 = new Employee("Hans", "Landa", 43);
+
+Random rnd1 = new Random();
+Random rnd2 = new Random();
+Random rnd3 = new Random();
+
+for (int i = 0; i < 5; i++)
 {
-    int index = (int)Char.GetNumericValue(character);
-    if (character == '0')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }
-    else if (character == '1')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '2')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '3')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '4')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '5')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '6')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '7')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '8')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }else if (character == '9')
-    {
-        allNumbers[index]++;
-        Console.WriteLine($"Ilosc cyfr '{character}': {allNumbers[index]}");
-    }
+    employee1.AddPoints(rnd1.Next(1, 11));
+    employee2.AddPoints(rnd2.Next(1, 11));
+    employee3.AddPoints(rnd3.Next(1, 11));
+}
+
+if (employee1.sumOfPoints > employee2.sumOfPoints && employee1.sumOfPoints > employee3.sumOfPoints)
+{
+    Console.WriteLine($"Employee data:\n\n{employee1.Name}\t{employee1.Surname}\t\tage:\t{employee1.Age}\nPoints\tearned:\t{employee1.sumOfPoints}");
+}
+else if (employee2.sumOfPoints > employee1.sumOfPoints && employee2.sumOfPoints > employee3.sumOfPoints)
+{
+    Console.WriteLine($"Employee data:\n\n{employee2.Name}\t{employee2.Surname}\t\tage:\t{employee2.Age}\nPoints\tearned:\t{employee2.sumOfPoints}");
+}
+else if (employee3.sumOfPoints > employee1.sumOfPoints && employee3.sumOfPoints > employee2.sumOfPoints)
+{
+    Console.WriteLine($"Employee data:\n\n{employee3.Name}\t{employee3.Surname}\t\tage:\t{employee3.Age}\nPoints\tearned:\t{employee3.sumOfPoints}");
 };
-
-
-
-
