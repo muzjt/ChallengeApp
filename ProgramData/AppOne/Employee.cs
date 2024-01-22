@@ -5,7 +5,7 @@
     }
 }
 
-class Employee
+public class Employee
 {
 
     private List<int> points = new List<int>();

@@ -15,6 +15,13 @@ for (int i = 0; i < 5; i++)
     employee3.AddPoints(rnd3.Next(1, 11));
 }
 
+for (int i = 0; i > -1; i--)
+{
+    employee1.AddPoints(rnd1.Next(1, 11));
+    employee2.AddPoints(rnd2.Next(1, 11));
+    employee3.AddPoints(rnd3.Next(1, 11));
+}
+
 if (employee1.sumOfPoints > employee2.sumOfPoints && employee1.sumOfPoints > employee3.sumOfPoints)
 {
     Console.WriteLine($"Employee data:\n\n{employee1.Name}\t{employee1.Surname}\t\tage:\t{employee1.Age}\nPoints\tearned:\t{employee1.sumOfPoints}");
