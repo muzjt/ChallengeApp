@@ -16,7 +16,7 @@ namespace ChallengeApp.Tests
             var sumOfPoints = employee.sumOfPoints;
 
             //Assert
-            Assert.AreEqual(1 + 5, sumOfPoints);
+            Assert.AreEqual(6, sumOfPoints);
         }
         [Test]
         public void PenaltyPointCheck()
@@ -31,7 +31,7 @@ namespace ChallengeApp.Tests
             var sumOfPoints = employee.sumOfPoints;
 
             //Assert
-            Assert.That(sumOfPoints, Is.EqualTo(1 + 5 + (-1)));
+            Assert.That(sumOfPoints, Is.EqualTo(5));
         }
         [Test]
         public void MultipleEarnedPointsByTwo()
@@ -46,7 +46,7 @@ namespace ChallengeApp.Tests
             var sumOfPoints = employee.sumOfPoints;
 
             //Assert
-            Assert.That(sumOfPoints, Is.EqualTo(2 * 2 + 4 * 2));
+            Assert.That(sumOfPoints, Is.EqualTo(12));
         }
         [Test]
         public void DivideEarnedPointsByThree()
@@ -61,7 +61,7 @@ namespace ChallengeApp.Tests
             var sumOfPoints = employee.sumOfPoints;
 
             //Assert
-            Assert.That(sumOfPoints, Is.EqualTo(3 / 3 + 9 / 3));
+            Assert.That(sumOfPoints, Is.EqualTo(4));
         }
     }
 }
