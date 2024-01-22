@@ -38,8 +38,8 @@ namespace ChallengeApp.Tests
         {
             //Arrange
             var employee = new Employee("Antoni", "Nowak", 55);
-            employee.AddPoints(4 * 2);
-            employee.AddPoints(2 * 2);
+            employee.AddPoints(8);
+            employee.AddPoints(4);
 
 
             //Act
@@ -53,8 +53,8 @@ namespace ChallengeApp.Tests
         {
             //Arrange
             var employee = new Employee("Antoni", "Nowak", 55);
-            employee.AddPoints(3 / 3);
-            employee.AddPoints(9 / 3);
+            employee.AddPoints(1);
+            employee.AddPoints(3);
 
 
             //Act
