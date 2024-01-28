@@ -15,12 +15,17 @@ public class Employee
         this.Name = name;
         this.Surname = surname;
         this.Age = age;
-
     }
-
+    
+    public Employee(string name, int idCode)
+    {
+        this.Name = name;
+        this.IdCode = idCode;
+    }
     public string Name { get; private set; }
     public string Surname { get; private set; }
     public int Age { get; private set; }
+    public int IdCode { get; private set; }
 
     public int sumOfPoints
     {
